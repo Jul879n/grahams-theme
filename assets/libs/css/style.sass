@@ -1,0 +1,99 @@
+$background-color: #FFF8F0
+$primary-color: #D6453B
+$secondary-color: #5E7A58
+$extra-color: #C7931D
+$font-family: 'Roboto', sans-serif
+$text-color: #2E2E2E
+
+.product a
+  text
+
+body
+  background-color: $background-color
+  font-family: $font-family
+  color: $text-color
+  h1
+    font-size: 2.5rem //40px
+    color: $secondary-color
+  h2
+    font-size: 1.875rem //30px
+  h3
+    font-size: 1.5rem //24px
+.btn-menu
+  color: $primary-color
+  &.active
+    background: $primary-color
+    color: $background-color
+  &:visited
+    color: $primary-color
+  &.active:visited
+    background: $primary-color
+    color: $background-color
+.aws-search-form
+  border-radius: 16px !important
+.aws-wrapper
+  width: 20rem !important
+  input
+    background: $background-color
+    border-radius: 16px !important
+    border: 1px solid $primary-color !important
+    &::placeholder
+      color: $primary-color
+li
+  list-style: none !important
+
+#logo
+  height: 8rem
+  width: 8rem
+  border: 4px solid $background-color
+#title-banner
+  bottom: -1rem
+  left: 1rem
+.bg-mostaza
+  background: $extra-color
+.swiper-promotions
+  height: 35rem
+
+
+.text-mostaza
+  color: $extra-color
+
+.swiper-button-prev, .swiper-button-next
+  color: $extra-color !important
+
+.swiper-pagination-bullet-active
+  background: $extra-color
+/* Oculta las flechas de Swiper en pantallas de 768px o menos */
+@media (max-width: 768px)
+  .swiper-button-next, .swiper-button-prev
+    display: none !important
+  #banner
+    width: 100%
+    height: 5rem !important
+    object-fit: cover
+    h1
+      background: $background-color
+  #logo
+    display: none !important
+  .navbar-collapse
+    flex-direction: column !important
+    align-items: flex-start !important
+  .navbar-nav
+    flex-direction: column !important
+    width: 100%
+  .navbar-nav .btn-menu
+    width: 100%
+    text-align: left
+  .navbar-toggler
+    margin-bottom: 1rem
+  .col-6
+    width: 100%
+    margin-bottom: 1rem
+  .movil
+    display: flex !important
+    flex-direction: column
+    align-items: start !important
+    ul
+      display: flex !important
+      flex-direction: column
+      align-items: start !important

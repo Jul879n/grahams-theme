@@ -1,0 +1,8 @@
+.text-card-overlay {
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(180deg,rgba(42, 123, 155, 0) 0%, rgba(46, 46, 46, 0.35) 59%, rgba(46, 46, 46, 1) 86%);
+}
+.card-img-overlay > .position-relative {
+    z-index: 2;
+}

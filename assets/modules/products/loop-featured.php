@@ -45,7 +45,7 @@
             $featured_product->the_post();
             ?>
             <!-- Slides -->
-            <div class="swiper-slide card">
+            <div class="swiper-slide">
                 <?php wc_get_template_part('content', 'product'); ?>
             </div>
             <?php

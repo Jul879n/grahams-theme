@@ -1,12 +1,6 @@
 const swiper_promotions = new Swiper('.swiper-promotions', {
     // Optional parameters
     loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -25,9 +19,6 @@ const swiper_featured = new Swiper('.swiper-featured', {
     loop: true,
     slidesPerView: 6,
     spaceBetween: 20,
-    pagination: {
-        el: '.swiper-pagination',
-    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -41,7 +32,13 @@ const swiper_featured = new Swiper('.swiper-featured', {
         0: {
             slidesPerView: 2,
         },
-        768: {
+        769: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+        1200: {
             slidesPerView: 6,
         }
     }
@@ -50,7 +47,7 @@ jQuery(document).ready(function ($) {
     $("header ul").addClass("list-unstyled d-flex flex-row m-0 px-0")
     $("header ul li").addClass("list-unstyled d-flex flex-row px-3")
     const menuLinks = $("header ul li a");
-   menuLinks.addClass("btn btn-menu")
+    menuLinks.addClass("btn btn-menu")
     const actualPath = window.location.pathname;
     menuLinks.each(function () {
         if ($(this).text().trim().toLowerCase() === "carrito") {
@@ -64,11 +61,24 @@ jQuery(document).ready(function ($) {
         if (link === actualPath || link === window.location.href) {
             $(this).addClass('active');
         }
+        $(".product img").addClass('rounded-3')
     });
-    $(".product").addClass("card-body d-flex flex-column")
-    $(".product a").addClass("btn")
+    $('.product').addClass('product-equal-height d-flex flex-column justify-content-between');
+    $(".onsale").remove();
+    $('.product .woocommerce-LoopProduct-link').removeClass().addClass("d-flex flex-column align-content-start" +
+        " align-items-start btn text-start px-0")
+    $(".product h2").each(function () {
+        const $h2 = $(this);
+        const $h3 = $("<h3>").html($h2.html()).attr("class", $h2.attr("class"));
+        $h2.replaceWith($h3);
+    });
+    $(".add_to_cart_button").each(function () {
+        $(this).html('<i class="fa-solid fa-cart-shopping"></i> ' + $(this).text());
+        $(this).removeClass().addClass("btn btn-outline-red")
+    });
 
-    setTimeout(function() {
+    $('')
+    setTimeout(function () {
         $("#loader").remove();
     }, 500);
 });

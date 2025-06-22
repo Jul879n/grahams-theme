@@ -35,14 +35,14 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <div class='col movil'><?php echo do_shortcode( '[fibosearch]' ); ?></div>
-                <button class="navbar-toggler mb-0"
+                <button class="navbar-toggler mb-0 border-0"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarTogglerDemo01"
                         aria-controls="navbarTogglerDemo01"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse mt-3"
                      id="navbarTogglerDemo01">

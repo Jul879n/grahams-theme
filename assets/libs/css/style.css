@@ -36,6 +36,10 @@ body h3 {
 	color: #FFF8F0;
 }
 
+.navbar-toggler {
+	color: #D6453B;
+}
+
 li {
 	list-style: none !important;
 }

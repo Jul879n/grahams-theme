@@ -14,17 +14,12 @@
 
 get_header();
 ?>
-
     <main id="home-page" class="site-main container">
-
         <?php
         while ( have_posts() ) :
             the_post();
 
             get_template_part( 'template-parts/content-home-page', 'page' );
-
-
-
         endwhile; // End of the loop.
         ?>
 

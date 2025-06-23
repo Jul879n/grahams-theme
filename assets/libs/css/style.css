@@ -38,6 +38,23 @@
 	color: #FFF8F0;
 }
 
+.btn-contact {
+	color: #FFF8F0;
+}
+
+.btn-contact:hover {
+	background: #FFF8F0;
+	color: #5E7A58;
+}
+
+.btn-contact:visited {
+	color: #FFF8F0;
+}
+
+.btn-contact:visited:hover {
+	color: #5E7A58;
+}
+
 body {
 	background-color: #FFF8F0;
 	font-family: "Roboto", sans-serif;
@@ -116,8 +133,16 @@ li {
 	color: #5E7A58 !important;
 }
 
+.text-bg {
+	color: #FFF8F0;
+}
+
 .text-mostaza {
 	color: #C7931D;
+}
+
+.bg-green {
+	background: #5E7A58 !important;
 }
 
 .swiper-button-prev, .swiper-button-next {

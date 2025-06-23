@@ -115,10 +115,24 @@ jQuery(document).ready(function ($) {
         }
     });
     setTimeout(function () {
+        $('.wc-block-grid__product').addClass('product-equal-height d-flex flex-column justify-content-between');
+        $(".onsale").remove();
+        $('.wc-block-grid__product .woocommerce-LoopProduct-link').removeClass().addClass("d-flex flex-column align-content-start" + " align-items-start btn text-start px-0")
+        $(".wc-block-grid__product  .wc-block-grid__product-title").each(function () {
+            const $h2 = $(this);
+            const $h3 = $("<h3>").html($h2.html()).attr("class", $h2.attr("class"));
+            $h2.replaceWith($h3);
+        });
+        //TODO: continuar editando sugerencias de productos de carrito
+        $(".wc-block-grid__product  .wc-block-grid__product-title").removeClass().addClass("text-dark")
+        $(".add_to_cart_button").each(function () {
+            $(this).html('<i class="fa-solid fa-cart-shopping"></i> ' + $(this).text());
+            $(this).removeClass().addClass("btn btn-outline-red")
+        });
         $("img").addClass("rounded-2")
         $(".wc-block-components-checkout-place-order-button").removeClass().addClass("btn bg-green text-bg");
         $(".wc-block-cart__submit-container a").removeClass().addClass("btn bg-green text-bg w-100");
-    }, 500);
+    }, 300);
     setTimeout(function () {
         $("#loader").remove();
     }, 500);

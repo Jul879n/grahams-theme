@@ -17,6 +17,7 @@
                 <div id="gmap-canvas"
                      style="height:100%; width:100%;max-width:100%;">
                     <iframe style="height:100%;width:100%;border:0;"
+                            title="Google map of store location"
                             frameborder="0"
                             src="https://www.google.com/maps/embed/v1/place?q=<?php
 					        $store_address   = get_option( 'woocommerce_store_address' );

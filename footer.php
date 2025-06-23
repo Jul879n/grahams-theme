@@ -10,22 +10,23 @@
  */
 
 ?>
+<footer class='text-verde d-flex flex-column align-content-start border-top border-2 py-3 mt-5 border-green'>
+	<?php if ( is_active_sidebar( 'footer-1' ) ) :
+		dynamic_sidebar( 'footer-1' );
+	endif; ?>
+    <span>©
+    <?php echo get_bloginfo( 'name' ); ?> <?php echo date( 'Y' ); ?>
+</span>
+    <p><?php
+	    $store_address     = get_option( 'woocommerce_store_address' );
+	    $store_address_2   = get_option( 'woocommerce_store_address_2' );
+	    $store_city        = get_option( 'woocommerce_store_city' );
+	    $store_postcode    = get_option( 'woocommerce_store_postcode' );
+	    $full_address = $store_address . ' ' . $store_address_2 . ', '. $store_city;
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mr-grahams-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'mr-grahams-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mr-grahams-theme' ), 'mr-grahams-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	    echo esc_html($full_address);
+	    ?></p>
+</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

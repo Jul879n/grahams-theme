@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.border-green {
+	border-color: #5E7A58 !important;
+}
+
 .btn-outline-red {
 	border-color: #D6453B !important;
 	color: #D6453B;
@@ -14,6 +18,23 @@
 }
 
 .btn-outline-red:visited:hover {
+	color: #FFF8F0;
+}
+
+.btn-footer {
+	color: #5E7A58;
+}
+
+.btn-footer:hover {
+	background: #5E7A58;
+	color: #FFF8F0;
+}
+
+.btn-footer:visited {
+	color: #5E7A58;
+}
+
+.btn-footer:visited:hover {
 	color: #FFF8F0;
 }
 

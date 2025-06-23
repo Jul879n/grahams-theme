@@ -48,7 +48,7 @@
 	                <?php
 	                $whatsapp = get_field('whatsapp');
 	                if ( !empty($whatsapp) ) : ?>
-                        <a target='_blank' class='btn btn-contact' href='mailto:<?php echo esc_html($whatsapp); ?>'>
+                        <a target='_blank' class='btn btn-contact' href='https://wa.me/<?php echo esc_html($whatsapp); ?>'>
                             <i class="fa-brands fa-whatsapp"></i>
 			                <?php echo esc_html($whatsapp); ?>
                         </a>

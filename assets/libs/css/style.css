@@ -1,3 +1,22 @@
+@charset "UTF-8";
+.btn-outline-red {
+	border-color: #D6453B !important;
+	color: #D6453B;
+}
+
+.btn-outline-red:hover {
+	background: #D6453B;
+	color: #FFF8F0;
+}
+
+.btn-outline-red:visited {
+	color: #D6453B;
+}
+
+.btn-outline-red:visited:hover {
+	color: #FFF8F0;
+}
+
 body {
 	background-color: #FFF8F0;
 	font-family: "Roboto", sans-serif;
@@ -44,6 +63,11 @@ li {
 	list-style: none !important;
 }
 
+.product-equal-height {
+	min-height: 350px;
+}
+
+/* Ajusta el valor según lo que necesites */
 #logo {
 	height: 8rem;
 	width: 8rem;
@@ -63,6 +87,14 @@ li {
 	height: 35rem;
 }
 
+.text-verde {
+	color: #5E7A58;
+}
+
+.price {
+	color: #5E7A58 !important;
+}
+
 .text-mostaza {
 	color: #C7931D;
 }
@@ -77,6 +109,11 @@ li {
 
 .movil {
 	display: none !important;
+}
+
+ins[aria-hidden="true"] {
+	background: none !important;
+	color: #C7931D !important;
 }
 
 @media (max-width: 1024px) {

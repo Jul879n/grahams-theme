@@ -21,6 +21,7 @@ body
     font-size: 1.5rem //24px
 .btn-menu
   color: $primary-color
+  width: max-content!important
   &.active
     background: $primary-color
     color: $background-color
@@ -29,16 +30,9 @@ body
   &.active:visited
     background: $primary-color
     color: $background-color
-.aws-search-form
-  border-radius: 16px !important
-.aws-wrapper
-  width: 20rem !important
-  input
-    background: $background-color
-    border-radius: 16px !important
-    border: 1px solid $primary-color !important
-    &::placeholder
-      color: $primary-color
+
+.navbar-toggler
+  color: $primary-color
 li
   list-style: none !important
 
@@ -63,8 +57,10 @@ li
 
 .swiper-pagination-bullet-active
   background: $extra-color
-/* Oculta las flechas de Swiper en pantallas de 768px o menos */
-@media (max-width: 768px)
+
+.movil
+  display: none !important
+@media (max-width: 1024px)
   .swiper-button-next, .swiper-button-prev
     display: none !important
   #banner
@@ -89,11 +85,18 @@ li
   .col-6
     width: 100%
     margin-bottom: 1rem
+  .desktop
+    display: none !important
   .movil
-    display: flex !important
-    flex-direction: column
-    align-items: start !important
+    display: block !important
     ul
       display: flex !important
-      flex-direction: column
-      align-items: start !important
+      flex-direction: column !important
+  //.movil
+  //  display: flex !important
+  //  flex-direction: column
+  //  align-items: start !important
+    //ul
+    //  display: flex !important
+    //  flex-direction: column
+    //  align-items: start !important

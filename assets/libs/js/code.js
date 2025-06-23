@@ -11,24 +11,57 @@ const swiper_promotions = new Swiper('.swiper-promotions', {
     },
 });
 
+// Swiper featured
 const swiper_featured = new Swiper('.swiper-featured', {
-    loop: true, slidesPerView: 6, spaceBetween: 20, navigation: {
-        nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', hideOnClick: true,
-    }, autoplay: {
-        delay: 3000, disableOnInteraction: false,
-    }, breakpoints: {
-        0: {
-            slidesPerView: 2,
-        }, 769: {
-            slidesPerView: 3,
-        }, 1024: {
-            slidesPerView: 4,
-        }, 1200: {
-            slidesPerView: 6,
-        }
+    loop: true,
+    slidesPerView: 6,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        hideOnClick: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+    breakpoints: {
+        0: {slidesPerView: 2},
+        769: {slidesPerView: 3},
+        1024: {slidesPerView: 4},
+        1200: {slidesPerView: 6},
+    }
+});
+// Swiper products
+const swiper_products = new Swiper('.swiper-products', {
+    loop: true,
+    slidesPerView: 6,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        hideOnClick: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+    breakpoints: {
+        0: {slidesPerView: 2},
+        769: {slidesPerView: 3},
+        1024: {slidesPerView: 4},
+        1200: {slidesPerView: 6},
     }
 });
 jQuery(document).ready(function ($) {
+    $('.swiper-featured').hover(
+        function () {
+            swiper_featured.autoplay.stop();
+        },
+        function () {
+            swiper_featured.autoplay.start();
+        }
+    );
     $("header ul").addClass("list-unstyled d-flex flex-row m-0 px-0")
     $("header ul li").addClass("list-unstyled d-flex flex-row px-3")
     const menuLinks = $("header ul li a");
@@ -81,6 +114,11 @@ jQuery(document).ready(function ($) {
             $(this).addClass('active');
         }
     });
+    setTimeout(function () {
+        $("img").addClass("rounded-2")
+        $(".wc-block-components-checkout-place-order-button").removeClass().addClass("btn bg-green text-bg");
+        $(".wc-block-cart__submit-container a").removeClass().addClass("btn bg-green text-bg w-100");
+    }, 500);
     setTimeout(function () {
         $("#loader").remove();
     }, 500);

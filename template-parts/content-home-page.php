@@ -23,5 +23,6 @@
    </div>
     <?php include get_template_directory() . '/assets/modules/products/loop-promotions.php'; ?>
     <?php include get_template_directory() . '/assets/modules/products/loop-featured.php'; ?>
+	<?php include get_template_directory() . '/assets/modules/products/loop-products.php'; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -4,6 +4,21 @@ $secondary-color: #5E7A58
 $extra-color: #C7931D
 $font-family: 'Roboto', sans-serif
 $text-color: #2E2E2E
+#loader
+  position: fixed !important
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 9999
+
+a
+  text-decoration: none
+  color: $extra-color
+  &:visited
+    color: $extra-color
+  &:hover
+    color: $extra-color
 .border-green
   border-color: $secondary-color !important
 
@@ -109,6 +124,10 @@ li
   color: $secondary-color !important
 .text-bg
   color: $background-color
+  &:visited
+    color: $background-color !important
+  &:hover
+    color: $background-color !important
 .text-mostaza
   color: $extra-color
 .bg-green

@@ -1,6 +1,3 @@
-<?php
-// Incrustar hoja de estilos desde PHP para evitar problemas de caché y rutas
-?>
 <script>
     function inctrustar_hoja_estilos_products() {
         var hoja_estilos_url =
@@ -12,30 +9,43 @@
     }
 
     inctrustar_hoja_estilos_products();
+
 </script>
 
+<!-- contenido videos -->
 <div class="container-fluid p-0 mt-3">
-	<div class='row'>
-		<?php
-		$args = [
-			'posts_per_page' => -1, // Número máximo de publicaciones a mostrar
-			'post_type'      => 'product', // Tipo de publicación a consultar
-			'post_status'    => 'publish', // Solo publicaciones publicadas
-		];
-		$featured_product = new WP_Query($args); // Realizar la consulta de publicaciones
-		if ($featured_product->have_posts()) { // Comprobar si hay publicaciones encontradas ?>
-			<?php while ($featured_product->have_posts()):
-				$featured_product->the_post();
-				?>
-				<div class='col-6 col-sm-4 col-lg-2'>
-					<?php wc_get_template_part('content', 'product'); ?>
-                </div>
-			<?php
-			endwhile; // Fin del bucle para mostrar cada publicación
-		} else {
-			echo __('Lo sentimos no hay productos'); // Mostrar mensaje si no se encuentran productos
-		}
-		wp_reset_postdata(); // Restablecer los datos de la consulta original
-		?>
+    <?php
+    $args = [
+        'posts_per_page' => 5,
+        // Número máximo de publicaciones a mostrar
+        'post_type' => 'product',
+        // Tipo de publicación a consultar
+        'post_status' => 'publish',
+        // Estado de la publicación
+    ];
+    $featured_product = new WP_Query($args); // Realizar la consulta de publicaciones
+    if ($featured_product->have_posts()) { // Comprobar si hay publicaciones encontradas ?>
+    <h2>Productos</h2>
+    <div class="swiper swiper-products w-100">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <?php while ($featured_product->have_posts()):
+            $featured_product->the_post();
+            ?>
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <?php wc_get_template_part('content', 'product'); ?>
+            </div>
+            <?php
+            endwhile; // Fin del bucle para mostrar cada publicación
+            } else {
+                echo __('Lo sentimos no hay productos'); // Mostrar mensaje si no se encuentran productos
+            }
+            wp_reset_postdata(); // Restablecer los datos de la consulta original
+            ?>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </div>

@@ -1,4 +1,26 @@
 @charset "UTF-8";
+#loader {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+}
+
+a {
+	text-decoration: none;
+	color: #C7931D;
+}
+
+a:visited {
+	color: #C7931D;
+}
+
+a:hover {
+	color: #C7931D;
+}
+
 .border-green {
 	border-color: #5E7A58 !important;
 }
@@ -137,6 +159,14 @@ li {
 	color: #FFF8F0;
 }
 
+.text-bg:visited {
+	color: #FFF8F0 !important;
+}
+
+.text-bg:hover {
+	color: #FFF8F0 !important;
+}
+
 .text-mostaza {
 	color: #C7931D;
 }
@@ -204,6 +234,7 @@ ins[aria-hidden="true"] {
 	}
 }
 
+/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

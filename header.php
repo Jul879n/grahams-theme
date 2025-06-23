@@ -28,8 +28,7 @@
      class="site">
     <header id="masthead"
             class="site-header py-3 px-0">
-        <div id='loader' class='position-absolute z-3 bg-mostaza w-100 h-100 start-0 top-0 d-flex
-        justify-content-center align-items-center'>
+        <div id='loader' class='bg-mostaza d-flex justify-content-center align-items-center'>
 	        <?php echo get_custom_logo(); ?>
         </div>
         <nav class="navbar navbar-expand-lg">

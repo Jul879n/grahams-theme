@@ -39,7 +39,7 @@
                    <?php
                         $correo = get_field('correo');
                         if ( !empty($correo) ) : ?>
-                            <a target='_blank' class='btn btn-contact' href='mailto:<?php echo esc_html($whatsapp); ?>'>
+                            <a target='_blank' class='btn btn-contact' href='mailto:<?php echo esc_html($correo); ?>'>
                                 <i class="fa-solid fa-envelope"></i>
                                 <?php echo esc_html($correo); ?>
                             </a>

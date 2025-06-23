@@ -192,10 +192,6 @@ ins[aria-hidden="true"] {
 	.navbar-toggler {
 		margin-bottom: 1rem;
 	}
-	.col-6 {
-		width: 100%;
-		margin-bottom: 1rem;
-	}
 	.desktop {
 		display: none !important;
 	}
@@ -207,5 +203,7 @@ ins[aria-hidden="true"] {
 		flex-direction: column !important;
 	}
 }
+
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

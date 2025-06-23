@@ -27,7 +27,7 @@
 			<?php while ($featured_product->have_posts()):
 				$featured_product->the_post();
 				?>
-				<div class='col-2'>
+				<div class='col-6 col-sm-4 col-lg-2'>
 					<?php wc_get_template_part('content', 'product'); ?>
                 </div>
 			<?php

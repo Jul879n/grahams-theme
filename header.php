@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport"
@@ -28,8 +28,9 @@
      class="site">
     <header id="masthead"
             class="site-header py-3 px-0">
-        <div id='loader' class='bg-mostaza d-flex justify-content-center align-items-center'>
-	        <?php echo get_custom_logo(); ?>
+        <div id='loader'
+             class='bg-mostaza d-flex justify-content-center align-items-center'>
+			<?php echo get_custom_logo(); ?>
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -62,16 +63,16 @@
                     </div>
                     <div class="row w-100 movil">
                         <div class="col-12">
-			                <?php if ( is_active_sidebar( 'nav-left' ) ) :
-				                dynamic_sidebar( 'nav-left' );
-			                endif; ?>
+							<?php if ( is_active_sidebar( 'nav-left' ) ) :
+								dynamic_sidebar( 'nav-left' );
+							endif; ?>
 
                         </div>
                         <div class="col-12">
 
-			                <?php if ( is_active_sidebar( 'nav-rigth' ) ) :
-				                dynamic_sidebar( 'nav-rigth' );
-			                endif; ?>
+							<?php if ( is_active_sidebar( 'nav-rigth' ) ) :
+								dynamic_sidebar( 'nav-rigth' );
+							endif; ?>
                         </div>
                     </div>
                 </div>

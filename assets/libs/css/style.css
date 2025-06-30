@@ -196,6 +196,22 @@ ins[aria-hidden="true"] {
 	color: #C7931D !important;
 }
 
+.lupa {
+	top: 1%;
+	right: 1%;
+}
+
+.wp-post-image {
+	width: 100% !important;
+	height: 60vh !important;
+	object-fit: cover !important;
+	display: block;
+}
+
+.text-line {
+	text-decoration: line-through;
+}
+
 @media (max-width: 1024px) {
 	.swiper-button-next, .swiper-button-prev {
 		display: none !important;
@@ -238,7 +254,6 @@ ins[aria-hidden="true"] {
 	}
 }
 
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

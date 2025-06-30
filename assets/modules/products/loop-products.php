@@ -16,7 +16,7 @@
 <div class="container-fluid p-0 mt-3">
     <?php
     $args = [
-        'posts_per_page' => 5,
+        'posts_per_page' => 20,
         // Número máximo de publicaciones a mostrar
         'post_type' => 'product',
         // Tipo de publicación a consultar

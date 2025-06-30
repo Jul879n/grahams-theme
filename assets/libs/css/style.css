@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .text-dark {
 	color: #2E2E2E !important;
 }
@@ -131,7 +130,6 @@ li {
 	min-height: 350px;
 }
 
-/* Ajusta el valor según lo que necesites */
 #logo {
 	height: 8rem;
 	width: 8rem;
@@ -210,6 +208,10 @@ ins[aria-hidden="true"] {
 
 .text-line {
 	text-decoration: line-through;
+}
+
+.lista > * {
+	list-style-type: disc !important;
 }
 
 @media (max-width: 1024px) {

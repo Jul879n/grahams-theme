@@ -116,10 +116,7 @@ jQuery(document).ready(function ($) {
         const gallery = $("#producto .row").find(".woocommerce-product-gallery");
         const content = $("#producto .row .woocommerce-tabs").find(".entry-content");
         const additional = $("#producto .row .summary");
-        $("#producto .row").append(
-            "<div id='gallery' class='col-12 col-sm-6'></div>" +
-            "<div id='content-product' class='col-12 col-sm-6'></div>"
-        );
+        $("#producto .row").append("<div id='gallery' class='col-12 col-sm-6'></div>" + "<div id='content-product' class='col-12 col-sm-6'></div>");
         $('#gallery').append(gallery);
         $("#gallery .woocommerce-product-gallery").addClass("position-relative");
         $("#content-product").append(`<h1>${title}</h1>`).append(content).append(additional);
@@ -136,18 +133,16 @@ jQuery(document).ready(function ($) {
         const originalPrice = prices[0] || '';
         const currentPrice = prices[1] || '';
         if (currentPrice) {
-            $(".wapf--inner").find("div").eq(0).empty().append(
-                `<span>Total del producto</span> <span class='d-flex gap-1'><span class='text-line text-mostaza'>${originalPrice}</span><span class='price'>${currentPrice}</span></span>`
-            );
+            $(".wapf--inner").find("div").eq(0).empty().append(`<span>Total del producto</span> <span class='d-flex gap-1'><span class='text-line text-mostaza'>${originalPrice}</span><span class='price'>${currentPrice}</span></span>`);
         } else {
-            $(".wapf--inner").find("div").eq(0).empty().append(
-                `<span>Total del producto</span> <span class='price'>${originalPrice}</span>`
-            );
+            $(".wapf--inner").find("div").eq(0).empty().append(`<span>Total del producto</span> <span class='price'>${originalPrice}</span>`);
         }
         $('.summary').find(".price").eq(0).remove();
         $(".wapf--inner").find("div").eq(0).removeClass().addClass("w-100 d-flex justify-content-between");
         $("#content-product .product_meta").remove();
-        $("#content-product .single_add_to_cart_button").removeClass().addClass("single_add_to_cart_button btn btn-outline-red");
+        $("#content-product ul").addClass("m-0 lista")
+        $(".cart .wapf .wapf-wrapper").after($("#content-product .quantity"));
+        $("#content-product .single_add_to_cart_button").removeClass().addClass("single_add_to_cart_button btn" + " btn-outline-red mt-1");
         setTimeout(function () {
             $("#gallery .woocommerce-product-gallery__trigger").addClass("position-absolute lupa z-1");
             $("#gallery .woocommerce-product-gallery .flex-control-nav").addClass('d-flex py-2 justify-content-start gap-1 m-0 p-0');

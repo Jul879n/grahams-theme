@@ -141,6 +141,7 @@ jQuery(document).ready(function ($) {
         $(".wapf--inner").find("div").eq(0).removeClass().addClass("w-100 d-flex justify-content-between");
         $("#content-product .product_meta").remove();
         $("#content-product ul").addClass("m-0 lista")
+        $("#content-product h3").remove()
         $(".cart .wapf .wapf-wrapper").after($("#content-product .quantity"));
         $("#content-product .single_add_to_cart_button").removeClass().addClass("single_add_to_cart_button btn" + " btn-outline-red mt-1");
         setTimeout(function () {

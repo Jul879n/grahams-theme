@@ -35,24 +35,28 @@
             </div>
             <div class="col-md-6">
                 <div class="card-body">
-                    <?php the_content(); ?>
+					<?php the_content(); ?>
                     <h3>Datos de contacto</h3>
-                   <?php
-                        $correo = get_field('correo');
-                        if ( !empty($correo) ) : ?>
-                            <a target='_blank' class='btn btn-contact' href='mailto:<?php echo esc_html($correo); ?>'>
-                                <i class="fa-solid fa-envelope"></i>
-                                <?php echo esc_html($correo); ?>
-                            </a>
-                        <?php endif; ?>
-	                <?php
-	                $whatsapp = get_field('whatsapp');
-	                if ( !empty($whatsapp) ) : ?>
-                        <a target='_blank' class='btn btn-contact' href='https://wa.me/<?php echo esc_html($whatsapp); ?>'>
-                            <i class="fa-brands fa-whatsapp"></i>
-			                <?php echo esc_html($whatsapp); ?>
+					<?php
+					$correo = get_field( 'correo' );
+					if ( ! empty( $correo ) ) : ?>
+                        <a target='_blank'
+                           class='btn btn-contact'
+                           href='mailto:<?php echo esc_html( $correo ); ?>'>
+                            <i class="fa-solid fa-envelope"></i>
+							<?php echo esc_html( $correo ); ?>
                         </a>
-	                <?php endif; ?>
+					<?php endif; ?>
+					<?php
+					$whatsapp = get_field( 'whatsapp' );
+					if ( ! empty( $whatsapp ) ) : ?>
+                        <a target='_blank'
+                           class='btn btn-contact'
+                           href='https://wa.me/<?php echo esc_html( $whatsapp ); ?>'>
+                            <i class="fa-brands fa-whatsapp"></i>
+							<?php echo esc_html( $whatsapp ); ?>
+                        </a>
+					<?php endif; ?>
                 </div>
             </div>
         </div>

@@ -1,16 +1,3 @@
-<script>
-    function inctrustar_hoja_estilos_products() {
-        var hoja_estilos_url =
-            '<?php echo get_site_url() . '/wp-content/themes/mr-grahams-theme/assets/modules/products/module-products.css'; ?>';
-        var hoja_estilos = document.createElement('link');
-        hoja_estilos.rel = 'stylesheet';
-        hoja_estilos.href = hoja_estilos_url;
-        document.head.appendChild(hoja_estilos);
-    }
-
-    inctrustar_hoja_estilos_products();
-
-</script>
 
 <!-- contenido videos -->
 <div class="seccion-portada container-fluid p-0">

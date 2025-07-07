@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
     const actualPath = window.location.pathname;
     menuLinks.each(function () {
         if ($(this).text().trim().toLowerCase() === "carrito") {
-            $(this).html('<i class="fa-solid fa-cart-shopping"></i>');
+            $(this).html('<i class="fa-solid fa-cart-shopping"></i> <span class="cart-count">' + cartData.count + '</span>');
         }
         if ($(this).text().trim().toLowerCase() === "mi cuenta") {
             $(this).html('<i class="fa-solid fa-user"></i>');
@@ -149,7 +149,26 @@ jQuery(document).ready(function ($) {
             $("#gallery .woocommerce-product-gallery .flex-control-nav").addClass('d-flex py-2 justify-content-start gap-1 m-0 p-0');
         }, 500);
     }
+
+    function actualizarCartCount() {
+        $.get(cartData.siteUrl + '/wp-admin/admin-ajax.php?action=get_cart_count', function (count) {
+            $('.cart-count').text(count);
+            console.log(count);
+            cartData.count = count;
+        });
+    }
+
+    // Llama a esta función después de cualquier acción que modifique el carrito
+   $(document).on('mousedown', '.wc-block-cart-item__remove-link', function () {
+        setTimeout(actualizarCartCount, 1500);
+    });
+    $(document).on('click', '.wc-block-components-quantity-selector__button--plus', function () {
+        setTimeout(actualizarCartCount, 1500);
+    });
+    $(document).on('click', '.wc-block-components-quantity-selector__button--minus', function () {
+        setTimeout(actualizarCartCount, 1500);
+    });
     setTimeout(function () {
         $("#loader").remove();
-    }, 500);
+    }, 1500);
 });

@@ -34,7 +34,6 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class='col movil'><?php echo do_shortcode( '[fibosearch]' ); ?></div>
                 <button class="navbar-toggler mb-0 border-0"
                         type="button"
                         data-bs-toggle="collapse"
@@ -44,6 +43,12 @@
                         aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                <div class='col movil'><?php echo do_shortcode( '[fibosearch]' ); ?></div>
+                <div class='movil-2'>
+	                <?php if ( is_active_sidebar( 'nav-rigth' ) ) :
+		                dynamic_sidebar( 'nav-rigth' );
+	                endif; ?>
+                </div>
                 <div class="collapse navbar-collapse mt-3"
                      id="navbarTogglerDemo01">
                     <div class="row w-100 desktop">
@@ -65,13 +70,6 @@
                         <div class="col-12">
 							<?php if ( is_active_sidebar( 'nav-left' ) ) :
 								dynamic_sidebar( 'nav-left' );
-							endif; ?>
-
-                        </div>
-                        <div class="col-12">
-
-							<?php if ( is_active_sidebar( 'nav-rigth' ) ) :
-								dynamic_sidebar( 'nav-rigth' );
 							endif; ?>
                         </div>
                     </div>

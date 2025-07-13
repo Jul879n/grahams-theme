@@ -1,6 +1,6 @@
 
 <!-- contenido videos -->
-<div class="seccion-portada container-fluid p-0">
+<div data-aos="fade-up" data-aos-duration="1500" class="seccion-portada container-fluid p-0">
     <?php $active = true;
     $temp = $wp_query;
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -30,7 +30,7 @@
                 <!-- Slides -->
                <div class="swiper-slide card text-mostaza position-relative overflow-hidden">
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="...">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end  pb-5 text-card-overlay ">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end  pb-5 text-card-overlay bg-transparent">
                         <h2 class="card-title"><?php the_title() ?></h2>
                        <?php the_content() ?>
                     </div>

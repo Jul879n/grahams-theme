@@ -30,7 +30,7 @@
             class="site-header py-3 px-0">
         <div id='loader'
              class='bg-mostaza d-flex justify-content-center align-items-center'>
-			<?php echo get_custom_logo(); ?>
+			<div class='animate__animated animate__hinge'><?php echo get_custom_logo(); ?></div>
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">

@@ -1,6 +1,6 @@
 
 <!-- contenido videos -->
-<div class="container-fluid p-0 mt-3">
+<div data-aos="fade-up" data-aos-duration="1500" class="container-fluid p-0 mt-3">
     <?php
     $args = [
         'posts_per_page' => 20,
